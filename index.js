@@ -34,12 +34,12 @@ function getData() {
   const requestOptions = {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify(payload),
   };
 
-  fetch('https://5e8c6579e61fbd00164aebec.mockapi.io/register', requestOptions)
+  fetch('https://5e8c6579e61fbd00164aebec.mockapi.io/register')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
