@@ -31,19 +31,14 @@ function getData() {
     newsletter: newsletterInput.checked,
   };
 
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  };
-
-  fetch('https://5e8c6579e61fbd00164aebec.mockapi.io/register', requestOptions)
+  fetch('https://5e8c6579e61fbd00164aebec.mockapi.io/register')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+      return response.json()
+    })
+    .then((data)=>{
       // print in the console
       console.log(data);
       const responseText = document.createTextNode(`Registration successful. data: ${data}`);
