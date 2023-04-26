@@ -1,0 +1,103 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+/*  container to keep contents locked */
+.container {
+  max-width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 60%;
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+.registration-form > * {
+  margin-bottom: 1.5rem; 
+}
+
+.registration-form__wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.registration-form__wrapper.row {
+   flex-direction: row; 
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  align-items: flex-start;
+}
+
+.row > * {
+  padding: 0 1rem;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col {
+  width: 50%;
+}
+
+.registration-form__label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.registration-form__input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
+.registration-form__checkbox {
+  margin-right: 0.5rem;
+}
+
+.registration-form__submit {
+  padding: 0.75rem 5rem;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+.registration-form__submit:hover {
+  background-color: blue;
+}

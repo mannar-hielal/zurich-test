@@ -1,0 +1,11 @@
+{
+  "name": "code-challenge-1",
+  "version": "1.0.0",
+  "description": "- Username (required)\r - Password (required)\r - Confirm password (required)\r - Email (required)\r - Phone number\r - Newsletter subscription (checkbox)\r - Submit button",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
