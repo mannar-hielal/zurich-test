@@ -34,12 +34,13 @@ function getData() {
   const requestOptions = {
     method: 'POST',
     headers: {
+      'Accept': 'application/json',
       'Content-Type': 'application/json; charset=UTF-8',
     },
     body: JSON.stringify(payload),
   };
 
-  fetch('https://5e8c6579e61fbd00164aebec.mockapi.io/register')
+  fetch('https://httpbin.org/post', requestOptions)
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -48,8 +49,8 @@ function getData() {
     })
     .then((data)=>{
       // print in the console
-      console.log(data);
-      const responseText = document.createTextNode(`Registration successful. data: ${data}`);
+      console.log(data.data);
+      const responseText = document.createTextNode(`Registration successful. data: ${data.data}`);
       responseContainer.appendChild(responseText);
     })
     .catch((error) => { // handle error
